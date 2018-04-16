@@ -1,6 +1,9 @@
 console.log('brand of goods 3');
 
-console.log('btm');
-console.log('footer');
 
+console.log('footer');
 console.log('headline');
+
+// .partners scripts goes here
+console.log('partners');
+// .main-video scripts goes here
