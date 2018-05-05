@@ -428,7 +428,10 @@ body {
   line-height: 1.5;
   font-family: 'FuturaPT-Book', Helvetica, Arial, sans-serif;
 }
-body,
+input,
+textarea {
+  font-family: 'FuturaPT-Book', Helvetica, Arial, sans-serif;
+}
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -901,6 +904,189 @@ video::-webkit-media-controls {
 .partners__list {
   list-style: circle outside;
   margin-left: 25px;
+}
+.animate,
+.reach-us .btn,
+.reach-us .btn span,
+.reach-us .overlay .overlay-content,
+.reach-us .overlay .overlay-content .overlay-close,
+.reach-us .overlay .overlay-content .signup-form input,
+.reach-us .overlay .overlay-content .signup-form textarea {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.reach-us * {
+  outline: none;
+}
+.reach-us form,
+.reach-us label,
+.reach-us input {
+  display: block;
+}
+.reach-us textarea {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+}
+.reach-us main {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+.reach-us .main-heading {
+  line-height: 100%;
+  font-weight: 600;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+.reach-us .btn {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 0.7em;
+}
+.reach-us .btn span {
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.reach-us .btn:not(.btn-outline) {
+  background-color: #fff;
+}
+.reach-us .btn:not(.btn-outline) span {
+  color: #666;
+}
+.reach-us .btn:not(.btn-outline):hover {
+  background-color: #f7f7f7;
+}
+.reach-us .btn.btn-outline {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.reach-us .btn.btn-outline span {
+  color: #fff;
+}
+.reach-us .btn.btn-outline:hover {
+  background-color: #fff;
+}
+.reach-us .btn.btn-outline:hover span {
+  color: #5ea635;
+}
+.reach-us .popup-trigger {
+  width: 175px;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  -webkit-box-shadow: 0 0 25px 0 rgba(0,0,0,0.05);
+          box-shadow: 0 0 25px 0 rgba(0,0,0,0.05);
+}
+.reach-us .overlay {
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  float: left;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5;
+  opacity: 0;
+  -webkit-transform: translateY(100vh);
+          transform: translateY(100vh);
+  -webkit-transition: opacity 0.5s, z-index 0s 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, z-index 0s 0.5s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, z-index 0s 0.5s;
+  transition: opacity 0.5s, transform 0.5s, z-index 0s 0.5s, -webkit-transform 0.5s;
+}
+.reach-us .overlay .overlay-background {
+  background-color: rgba(94,166,53,0.95);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 5;
+}
+.reach-us .overlay .overlay-content {
+  width: 100%;
+  max-width: 530px;
+  margin: 100px auto 0;
+  padding: 0 15px;
+  color: #fff;
+  position: relative;
+  z-index: 10;
+}
+.reach-us .overlay .overlay-content .overlay-close {
+  display: block;
+  font-size: 2em;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 15px;
+}
+.reach-us .overlay .overlay-content .overlay-close:hover {
+  opacity: 0.8;
+}
+.reach-us .overlay .overlay-content .signup-form {
+  margin-top: 35px;
+}
+.reach-us .overlay .overlay-content .signup-form label {
+  line-height: 100%;
+  margin-bottom: 5px;
+  font-size: 1em;
+}
+.reach-us .overlay .overlay-content .signup-form input,
+.reach-us .overlay .overlay-content .signup-form textarea {
+  background-color: transparent;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid rgba(254,254,254,0.3);
+  border-radius: 5px;
+  color: #fff;
+  font-size: 1em;
+}
+.reach-us .overlay .overlay-content .signup-form input:hover,
+.reach-us .overlay .overlay-content .signup-form textarea:hover,
+.reach-us .overlay .overlay-content .signup-form input:focus,
+.reach-us .overlay .overlay-content .signup-form textarea:focus {
+  border-color: #fff;
+}
+.reach-us .overlay .overlay-content .signup-form .submit-btn {
+  width: 150px;
+}
+.reach-us .overlay.open {
+  z-index: 15;
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+  -webkit-transition: opacity 0.5s, z-index 0s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, z-index 0s, -webkit-transform 0.5s;
+  transition: opacity 0.5s, transform 0.5s, z-index 0s;
+  transition: opacity 0.5s, transform 0.5s, z-index 0s, -webkit-transform 0.5s;
+}
+.reach-us .overlay.short .overlay-content {
+  margin: 30px auto;
+}
+@media (max-width: 600px) {
+  .reach-us .overlay .overlay-content {
+    margin: 25px auto;
+  }
+}
+.reach-us #thankyou_message {
+  margin-top: 30px;
 }
 .tech__block {
   padding: 60px;
