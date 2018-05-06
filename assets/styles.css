@@ -78,7 +78,8 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+.header__item {
   margin: 0;
   padding: 0;
 }
@@ -456,20 +457,28 @@ textarea {
   }
 }
 a,
+.header__item,
 a:active,
+.header__item:active,
 a:focus,
+.header__item:focus,
 a:hover,
-a:visited {
+.header__item:hover,
+a:visited,
+.header__item:visited {
   text-decoration: none;
   cursor: pointer;
 }
-a {
+a,
+.header__item {
   position: relative;
   color: inherit;
   text-decoration: none;
 }
 a:before,
-a:after {
+.header__item:before,
+a:after,
+.header__item:after {
   content: '';
   position: absolute;
   -webkit-transition: -webkit-transform 0.3s ease;
@@ -734,7 +743,7 @@ button {
   display: flex;
   list-style-type: none;
 }
-.header__menu a {
+.header__item {
   color: #0d0d0d;
   font-weight: 600;
   font-size: 1.3em;
@@ -743,7 +752,7 @@ button {
   height: 36px;
   margin: 0 0 0 30px;
 }
-.header__menu a.link-effect:before {
+.header__item.link-effect:before {
   height: 2px;
   background-color: #0d0d0d;
 }
