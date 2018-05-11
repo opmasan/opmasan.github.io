@@ -37,6 +37,11 @@ console.log('partners');
             return $('#overlay').removeClass('open');
         });
     });
+    $(document).on('keyup',function(evt) {
+        if (evt.keyCode == 27) {
+            return $('#overlay').removeClass('open');
+        }
+    });
 
 }).call(this);
 // .tech scripts goes here

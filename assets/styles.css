@@ -429,6 +429,12 @@ body {
   line-height: 1.5;
   font-family: 'FuturaPT-Book', Helvetica, Arial, sans-serif;
 }
+@media (max-width: 1366px) {
+  html,
+  body {
+    font-size: 15px;
+  }
+}
 input,
 textarea {
   font-family: 'FuturaPT-Book', Helvetica, Arial, sans-serif;
@@ -889,7 +895,7 @@ video::-webkit-media-controls {
   display: none !important;
 }
 .partners {
-  padding: 150px 60px 60px;
+  padding: 8em 3.5em 3.5em;
 }
 .partners h2 {
   font-size: 2.5em;
@@ -926,6 +932,18 @@ video::-webkit-media-controls {
 }
 .reach-us * {
   outline: none;
+}
+.reach-us ::-webkit-input-placeholder {
+  color: rgba(255,255,255,0.8);
+}
+.reach-us ::-moz-placeholder {
+  color: rgba(255,255,255,0.8);
+}
+.reach-us :-ms-input-placeholder {
+  color: rgba(255,255,255,0.8);
+}
+.reach-us :-moz-placeholder {
+  color: rgba(255,255,255,0.8);
 }
 .reach-us form,
 .reach-us label,
