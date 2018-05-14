@@ -44,5 +44,6 @@ console.log('partners');
     });
 
 }).call(this);
+// .reach_us_form scripts goes here
 // .slider scripts goes here
 // .tech scripts goes here

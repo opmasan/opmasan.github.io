@@ -556,6 +556,16 @@ button {
 .padding-top-lg {
   padding-top: 2em;
 }
+.animate,
+.signup-form input,
+.signup-form textarea,
+.signup-form .btn,
+.signup-form .btn span,
+.reach-us .overlay .overlay-content,
+.reach-us .overlay .overlay-content .overlay-close {
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
 .slick-prev,
 .slick-next {
   font-size: 0;
@@ -832,6 +842,11 @@ button {
   -webkit-transition: top 0.15s;
   transition: top 0.15s;
 }
+@media only screen and (min-width: 1200px) {
+  .header {
+    height: 90px;
+  }
+}
 .header__logo {
   background-image: url("images/MasterDynamix_Logo.svg");
   background-position: left center;
@@ -840,6 +855,12 @@ button {
   display: block;
   height: 81px;
   width: 161px;
+}
+@media (max-width: 1280px) {
+  .header__logo {
+    height: 65px;
+    width: 129px;
+  }
 }
 .header__menu {
   display: -webkit-box;
@@ -996,10 +1017,10 @@ video::-webkit-media-controls {
   padding: 8em 3.5em 3.5em;
 }
 .partners h2 {
-  font-size: 2.5em;
+  font-size: 2.4em;
 }
 .partners h4 {
-  font-size: 1.5em;
+  font-size: 1.4em;
 }
 .partners a {
   color: #5ea635;
@@ -1018,15 +1039,90 @@ video::-webkit-media-controls {
   list-style: circle outside;
   margin-left: 25px;
 }
-.animate,
-.reach-us .btn,
-.reach-us .btn span,
-.reach-us .overlay .overlay-content,
-.reach-us .overlay .overlay-content .overlay-close,
-.reach-us .overlay .overlay-content .signup-form input,
-.reach-us .overlay .overlay-content .signup-form textarea {
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+.signup-form {
+  margin-top: 35px;
+}
+.signup-form label {
+  line-height: 100%;
+  margin-bottom: 5px;
+  font-size: 1em;
+}
+.signup-form textarea {
+  width: 100%;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 100px;
+}
+.signup-form input,
+.signup-form textarea {
+  background-color: transparent;
+  width: 100%;
+  height: 40px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid rgba(254,254,254,0.3);
+  color: #fff;
+  font-size: 1em;
+}
+.signup-form input:hover,
+.signup-form textarea:hover,
+.signup-form input:focus,
+.signup-form textarea:focus {
+  border-color: #fff;
+}
+.signup-form .btn {
+  font-family: 'FuturaPT-Bold', Helvetica, Arial, sans-serif;
+  display: block;
+  padding: 1.5em 4.5em;
+  border: 0;
+  text-align: center;
+  cursor: pointer;
+  font-size: 0.8em;
+  letter-spacing: 1.1px;
+}
+.signup-form .btn span {
+  font-weight: 600;
+  font-size: 1em;
+  text-transform: uppercase;
+}
+.signup-form .btn:not(.btn-outline) {
+  background-color: #fff;
+}
+.signup-form .btn:not(.btn-outline) span {
+  color: #666;
+}
+.signup-form .btn:not(.btn-outline):hover {
+  background-color: #f7f7f7;
+}
+.signup-form .btn.btn-outline {
+  background-color: transparent;
+  border: 1px solid #fff;
+}
+.signup-form .btn.btn-outline span {
+  color: #fff;
+}
+.signup-form .btn.btn-outline:hover {
+  background-color: #fff;
+}
+.signup-form .btn.btn-outline:hover span {
+  color: #5ea635;
+}
+.signup-form.dark input,
+.signup-form.dark textarea {
+  border: 1px solid rgba(1,1,1,0.3);
+  color: #333;
+}
+.signup-form.dark .btn-outline {
+  border-color: #333;
+}
+.signup-form.dark .btn-outline span {
+  color: #333;
+}
+.signup-form.dark .btn-outline:hover {
+  border-color: #5ea635;
+}
+.signup-form.dark .btn-outline:hover span {
+  color: #5ea635;
 }
 .reach-us * {
   outline: none;
@@ -1048,12 +1144,6 @@ video::-webkit-media-controls {
 .reach-us input {
   display: block;
 }
-.reach-us textarea {
-  width: 100%;
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 100px;
-}
 .reach-us main {
   display: block;
   width: 100%;
@@ -1068,43 +1158,6 @@ video::-webkit-media-controls {
   font-weight: 600;
   font-size: 2em;
   text-transform: uppercase;
-}
-.reach-us .btn {
-  font-family: 'FuturaPT-Bold', Helvetica, Arial, sans-serif;
-  display: block;
-  padding: 1.5em 4.5em;
-  border: 0;
-  text-align: center;
-  cursor: pointer;
-  font-size: 0.8em;
-  letter-spacing: 1.1px;
-}
-.reach-us .btn span {
-  font-weight: 600;
-  font-size: 1em;
-  text-transform: uppercase;
-}
-.reach-us .btn:not(.btn-outline) {
-  background-color: #fff;
-}
-.reach-us .btn:not(.btn-outline) span {
-  color: #666;
-}
-.reach-us .btn:not(.btn-outline):hover {
-  background-color: #f7f7f7;
-}
-.reach-us .btn.btn-outline {
-  background-color: transparent;
-  border: 1px solid #fff;
-}
-.reach-us .btn.btn-outline span {
-  color: #fff;
-}
-.reach-us .btn.btn-outline:hover {
-  background-color: #fff;
-}
-.reach-us .btn.btn-outline:hover span {
-  color: #5ea635;
 }
 .reach-us .popup-trigger {
   width: 175px;
@@ -1163,31 +1216,6 @@ video::-webkit-media-controls {
 .reach-us .overlay .overlay-content .overlay-close:hover {
   opacity: 0.8;
 }
-.reach-us .overlay .overlay-content .signup-form {
-  margin-top: 35px;
-}
-.reach-us .overlay .overlay-content .signup-form label {
-  line-height: 100%;
-  margin-bottom: 5px;
-  font-size: 1em;
-}
-.reach-us .overlay .overlay-content .signup-form input,
-.reach-us .overlay .overlay-content .signup-form textarea {
-  background-color: transparent;
-  width: 100%;
-  height: 40px;
-  margin-bottom: 20px;
-  padding: 10px;
-  border: 1px solid rgba(254,254,254,0.3);
-  color: #fff;
-  font-size: 1em;
-}
-.reach-us .overlay .overlay-content .signup-form input:hover,
-.reach-us .overlay .overlay-content .signup-form textarea:hover,
-.reach-us .overlay .overlay-content .signup-form input:focus,
-.reach-us .overlay .overlay-content .signup-form textarea:focus {
-  border-color: #fff;
-}
 .reach-us .overlay.open {
   z-index: 15;
   opacity: 1;
@@ -1230,7 +1258,7 @@ video::-webkit-media-controls {
   margin: 30px;
 }
 .tech__block {
-  padding: 60px;
+  padding: 30px 90px;
 }
 .tech__title {
   text-align: center;
