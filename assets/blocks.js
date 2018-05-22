@@ -5,8 +5,6 @@ console.log('footer');
 
 console.log('headline');
 // .main-video scripts goes here
-// .partners scripts goes here
-console.log('partners');
 // .reach_us scripts goes here
 (function() {
     var calculateHeight;
@@ -30,7 +28,7 @@ console.log('partners');
             return $('#overlay-background').height(calculateHeight());
         });
         $(window).trigger('resize');
-        $('#popup-trigger').click(function() {
+        $('a[data-open="popup-trigger"]').click(function() {
             return $('#overlay').addClass('open').find('.signup-form input:first').select();
         });
         return $('#overlay-background, #overlay-close').click(function() {
@@ -46,4 +44,6 @@ console.log('partners');
 }).call(this);
 // .reach_us_form scripts goes here
 // .slider scripts goes here
+// .partners scripts goes here
+console.log('partners');
 // .tech scripts goes here
