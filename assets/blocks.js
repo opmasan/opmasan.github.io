@@ -5,6 +5,8 @@ console.log('footer');
 
 console.log('headline');
 // .main-video scripts goes here
+// .partners scripts goes here
+console.log('partners');
 // .reach_us scripts goes here
 (function() {
     var calculateHeight;
@@ -44,6 +46,4 @@ console.log('headline');
 }).call(this);
 // .reach_us_form scripts goes here
 // .slider scripts goes here
-// .partners scripts goes here
-console.log('partners');
 // .tech scripts goes here
