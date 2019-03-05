@@ -1,7 +1,7 @@
 console.log('brand of goods 3');
 
-console.log('footer');
 
+console.log('footer');
 function classToggle() {
   const navs = document.querySelectorAll('.navbar__items')
   
@@ -10,10 +10,11 @@ function classToggle() {
 
 document.querySelector('.navbar__link-toggle').addEventListener('click', classToggle);
 console.log('headline');
+// .key-to-success scripts goes here
+// .main-block scripts goes here
 // .members scripts goes here
 // .partners scripts goes here
 console.log('partners');
-// .key-to-success scripts goes here
 // .reach_us scripts goes here
 (function() {
     var calculateHeight;
@@ -56,5 +57,4 @@ console.log('partners');
 // .slider scripts goes here
 // .tech scripts goes here
 // .main-video scripts goes here
-// .main-block scripts goes here
 // .what-we-do scripts goes here
