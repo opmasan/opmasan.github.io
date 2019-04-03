@@ -130,7 +130,7 @@ if (window.location.href.indexOf("partners") > -1) {
         responsiveWidth: 767,
         afterResponsive: function(isResponsive){},
         afterRender: function(){
-            var modalBigContent = new tingle.modal({
+            var myModalContent = new tingle.modal({
                 onOpen: function() {
                     fullpage_api.setAllowScrolling(false);
                 },
@@ -138,48 +138,18 @@ if (window.location.href.indexOf("partners") > -1) {
                     fullpage_api.setAllowScrolling(true);
                 }
             });
-            var btn1 = document.querySelector('.js-tingle-modal-1');
-            if(btn1){
-                btn1.addEventListener('click', function(){
-                    modalBigContent.open();
-                });
-            }
-            
-            modalBigContent.setContent(document.querySelector('.tingle-demo-big-1').innerHTML);
-
-            var modalBigContent2 = new tingle.modal({
-                onOpen: function() {
-                    fullpage_api.setAllowScrolling(false);
-                },
-                onClose: function() {
-                    fullpage_api.setAllowScrolling(true);
+            var myBtn = document.querySelectorAll(".js-tingle-modal");
+            function myHandler() {
+                myModalContent.open();
+                if (this.hasAttribute("data-btn")) {
+                    myModalContent.setContent(document.querySelector(".project" + this.getAttribute("data-btn") + "-modal").innerHTML);
+                } else {
+                    myModalContent.setContent(document.querySelector(".project1-modal").innerHTML);
                 }
-            });
-            var btn1 = document.querySelector('.js-tingle-modal-2');
-            if(btn1){
-                btn1.addEventListener('click', function(){
-                    modalBigContent2.open();
-                });
             }
-            
-            modalBigContent2.setContent(document.querySelector('.tingle-demo-big-2').innerHTML);
-
-            // var i;
-            // projects = 5;
-            // for (i = 1; i < projects; i++) { 
-            //     var btn = 'btn'+i
-            //     btn = document.querySelector('.js-tingle-modal-'+i);
-            //     if(btn){
-            //         btn.addEventListener('click', function(){
-            //             modalBigContent.open();
-            //         });
-            //     }
-            //     if(document.querySelector('.tingle-demo-big-'+i) != null) {
-            //         modalBigContent.setContent(document.querySelector('.tingle-demo-big-'+i).innerHTML);
-            //     }
-                    
-            //     console.log(document.querySelector('.tingle-demo-big-'+i).innerHTML);
-            // }
+            for (var i = 0; i < myBtn.length; i++) {
+                myBtn[i].addEventListener("click", myHandler);
+            }
             
         }
     });

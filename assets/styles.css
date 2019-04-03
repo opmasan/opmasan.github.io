@@ -1363,16 +1363,38 @@ video::-webkit-media-controls {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
-  padding: 8em 3.5em 3.5em;
+  padding: 6em 3em 3em;
+}
+.portfolio .row {
+  width: 100%;
 }
 .portfolio h2 {
-  font-size: 2.4em;
+  font-size: 2em;
 }
 .portfolio h4 {
   font-size: 1.4em;
+  margin-bottom: 0.2em;
 }
 .portfolio a {
   color: #5ea635;
+}
+.portfolio__image {
+  position: relative;
+  padding-top: 0;
+  padding-bottom: 57%;
+  height: 0;
+}
+.portfolio__image video,
+.portfolio__image img {
+  max-width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  background: url("images/macbook3.png") center top no-repeat;
+  background-size: contain;
+  padding: 3.5% 12.3% 15%;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 .portfolio__name {
   margin-bottom: 0.25em;
@@ -1410,7 +1432,7 @@ video::-webkit-media-controls {
   margin-left: 25px;
 }
 .portfolio__about {
-  width: 64%;
+  width: 80%;
   margin: 25px auto;
 }
 .portfolio__link {
@@ -1428,84 +1450,44 @@ video::-webkit-media-controls {
     height: 100% !important;
   }
 }
-figure.effect-apollo {
-  background: #202030;
-  width: 70%;
-  position: relative;
+.js-tingle-modal:hover {
+  cursor: pointer;
+}
+.effect-honey {
   overflow: hidden;
-  margin: 0 auto;
-  border: 10px solid #202030;
-  border-radius: 5px;
 }
-figure.effect-apollo img {
-  max-width: 100%;
-  vertical-align: middle;
-  opacity: 0.95;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-}
-figure.effect-apollo video {
-  max-width: 100%;
-  vertical-align: middle;
-  opacity: 0.95;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-}
-figure.effect-apollo figcaption::before {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(255,255,255,0.5);
-  content: '';
-  -webkit-transition: -webkit-transform 0.6s;
-  transition: -webkit-transform 0.6s;
-  transition: transform 0.6s;
-  transition: transform 0.6s, -webkit-transform 0.6s;
-  -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -150%, 0);
-  transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, -150%, 0);
-}
-figure.effect-apollo p {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  margin: 1.5em;
-  padding: 0 1em;
-  max-width: 150px;
-  font-size: 1.3em;
-  border-right: 4px solid #fff;
-  color: #fff;
-  text-align: right;
-  opacity: 0;
+.effect-honey img,
+.effect-honey video {
+  opacity: 1;
   -webkit-transition: opacity 0.35s;
   transition: opacity 0.35s;
 }
-figure.effect-apollo h2 {
-  text-align: left;
+.effect-honey h3 {
+  position: absolute;
+  bottom: 35%;
+  left: 33%;
+  padding: 0.75em 1em;
+  width: 33%;
+  font-size: 1.75em;
+  background-color: rgba(255,255,255,0.95);
+  text-align: center;
+  -webkit-transform: translate3d(0, -30px, 0);
+  transform: translate3d(0, -30px, 0);
+  -webkit-transition: -webkit-transform 0.35s;
+  transition: -webkit-transform 0.35s;
+  transition: transform 0.35s;
+  transition: transform 0.35s, -webkit-transform 0.35s;
+  opacity: 0;
+  border-radius: 10px;
 }
-figure.effect-apollo:hover {
-  cursor: pointer;
-  border: 10px solid;
+.effect-honey:hover img,
+.effect-honey:hover video {
+  opacity: 0.9;
 }
-figure.effect-apollo:hover img,
-figure.effect-apollo:hover video {
-  opacity: 0.8;
-  -webkit-transform: scale3d(1.08, 1.08, 1);
-  transform: scale3d(1.08, 1.08, 1);
-}
-figure.effect-apollo:hover figcaption::before {
-  -webkit-transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 150%, 0);
-  transform: scale3d(1.9, 1.4, 1) rotate3d(0, 0, 1, 45deg) translate3d(0, 150%, 0);
-}
-figure.effect-apollo:hover p {
+.effect-honey:hover h3 {
   opacity: 1;
-  -webkit-transition-delay: 0.15s;
-  transition-delay: 0.15s;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 .signup-form {
   margin-top: 35px;
