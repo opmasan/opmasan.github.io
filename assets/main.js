@@ -13,10 +13,6 @@ var
     $isAnimatedFifth = $('.fifth .is-animated');
     $isAnimatedSixth = $('.sixth .is-animated');
 
-
-
-
-
 $('#fullpage').fullpage({
     licenseKey: 'xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxx',
     verticalCentered: true,
@@ -120,12 +116,12 @@ if (window.location.href.indexOf("partners") > -1) {
         licenseKey: 'xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxx',
         verticalCentered: false,
         lockAnchors: true,
-        anchors: ['FreeHomeRisk', 'HazardHub', 'UnderNDA', 'TrueReviewCasino'],
+        anchors: ['FreeHomeRisk', 'HazardHub', 'AgentRiskView', 'KeyNein', 'UnderNDA', 'TrueReviewCasino', 'Jeeffy'],
         navigation: true,
-        navigationTooltips: ['FreeHomeRisk', 'HazardHub', 'UnderNDA', 'TrueReviewCasino'],
+        navigationTooltips: ['FreeHomeRisk', 'HazardHub', 'AgentRiskView', 'KeyNein', 'UnderNDA', 'TrueReviewCasino', 'Jeeffy'],
         showActiveTooltip: true,
         menu: '#menu',
-        sectionsColor: ['#fff',  '#f7f7f7', '#fff', '#f7f7f7'],
+        sectionsColor: ['#fff', '#f7f7f7', '#fff', '#f7f7f7', '#fff', '#f7f7f7', '#fff', '#f7f7f7'],
         //disabled in mobile
         responsiveWidth: 767,
         afterResponsive: function(isResponsive){},
