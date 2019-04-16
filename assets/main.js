@@ -19,7 +19,7 @@ $('#fullpage').fullpage({
     lockAnchors: true,
     anchors: ['1', '2', '3', '4', '5', 'last'],
     navigation: true,
-    navigationTooltips: ['MasterDynamix',  'What we do', 'Your success', 'Slider', 'Our expertise', 'Reach us'],
+    navigationTooltips: ['MasterDynamix',  'What we do', 'Your success', 'Testimonials', 'Our expertise', 'Reach us'],
     showActiveTooltip: false,
     menu: '#menu',
     // sectionsColor: ['#fff',  '#fff', '#fff', '#fff', '#fff'],
@@ -31,14 +31,16 @@ $('#fullpage').fullpage({
         });
         
         //slick
-        jQuery('.slider').slick({
-            dots: true,
-            infinite: true,
+        jQuery('.testimonial').slick({
             speed: 650,
             autoplay: true,
-            prevArrow: '<span class="slick-prev"><i class="fas fa-chevron-left fa-2x"></i></span>',
-            nextArrow: '<span class="slick-next"><i class="fas fa-chevron-right fa-2x"></i></span>',
-            autoplaySpeed: 4000,
+            // prevArrow: '<span class="slick-prev"><i class="fas fa-chevron-left fa-2x"></i></span>',
+            // nextArrow: '<span class="slick-next"><i class="fas fa-chevron-right fa-2x"></i></span>',
+            autoplaySpeed: 9000,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            fade: true,
             responsive: [
                 {
                   breakpoint: 767,
@@ -47,6 +49,11 @@ $('#fullpage').fullpage({
                   }
                 }
             ]
+        });
+        jQuery('a[data-slide]').click(function(e) {
+            e.preventDefault();
+            var slideno = $(this).data('slide');
+            $('.testimonial').slick('slickGoTo', slideno);
         });
 
     },
@@ -116,9 +123,9 @@ if (window.location.href.indexOf("partners") > -1) {
         licenseKey: 'xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxx',
         verticalCentered: false,
         lockAnchors: true,
-        anchors: ['FreeHomeRisk', 'HazardHub', 'AgentRiskView', 'KeyNein', 'UnderNDA', 'TrueReviewCasino', 'Jeeffy'],
+        anchors: ['Jeeffy', 'AgentRiskView', 'FreeHomeRisk', 'HazardHub', 'KeyNein', 'UnderNDA', 'TrueReviewCasino'],
         navigation: true,
-        navigationTooltips: ['FreeHomeRisk', 'HazardHub', 'AgentRiskView', 'KeyNein', 'UnderNDA', 'TrueReviewCasino', 'Jeeffy'],
+        navigationTooltips: ['Jeeffy', 'AgentRiskView', 'FreeHomeRisk', 'HazardHub', 'KeyNein', 'UnderNDA', 'TrueReviewCasino'],
         showActiveTooltip: true,
         menu: '#menu',
         sectionsColor: ['#fff', '#f7f7f7', '#fff', '#f7f7f7', '#fff', '#f7f7f7', '#fff', '#f7f7f7'],

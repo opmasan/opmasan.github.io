@@ -57,5 +57,6 @@ console.log('partners');
 // .reach_us_form scripts goes here
 // .slider scripts goes here
 // .tech scripts goes here
+// .slider scripts goes here
 // .main-video scripts goes here
 // .what-we-do scripts goes here
