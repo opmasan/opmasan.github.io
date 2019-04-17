@@ -580,15 +580,10 @@ body {
 .text-center {
   text-align: center;
 }
-.slider {
-  width: calc(100% - 40px);
-  margin-left: auto;
-  margin-right: auto;
-}
 .slick-prev,
 .slick-next {
   position: absolute;
-  top: 50%;
+  top: 75%;
   display: block;
   width: 20px;
   height: 20px;
@@ -599,6 +594,7 @@ body {
   border: none;
   outline: none;
   opacity: 0.3;
+  z-index: 1111;
 }
 .slick-prev:hover,
 .slick-prev:focus,
@@ -622,7 +618,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 .slick-prev {
-  left: -20px;
+  right: 6.5em;
+}
+.slick-next {
+  right: 4.5em;
 }
 [dir='rtl'] .slick-prev {
   right: 0;
@@ -631,9 +630,6 @@ body {
 [dir='rtl'] .slick-next {
   right: auto;
   left: 0;
-}
-.slick-next {
-  right: -20px;
 }
 .slick-dotted.slick-slider {
   margin-bottom: 30px;
@@ -796,7 +792,7 @@ body {
           box-shadow: none;
 }
 .footer-block {
-  padding: 120px 60px 0;
+  padding: 90px 45px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -873,7 +869,7 @@ body {
   top: 0;
   color: #5ea635;
   width: 100%;
-  height: 120px;
+  height: 110px;
   padding: 0 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -889,7 +885,7 @@ body {
 }
 @media (max-width: 1280px) {
   .navbar {
-    height: 90px;
+    height: 80px;
   }
 }
 .navbar__logo {
@@ -898,8 +894,8 @@ body {
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
-  height: 81px;
-  width: 161px;
+  height: 80px;
+  width: 160px;
 }
 @media (max-width: 1280px) {
   .navbar__logo {
@@ -912,8 +908,8 @@ body {
   font-weight: 600;
   font-size: 1.3em;
   display: block;
-  line-height: 30px;
-  height: 36px;
+  line-height: 35px;
+  height: 35px;
   margin: 0 0 0 30px;
 }
 .navbar__link.not-active {
@@ -1364,14 +1360,10 @@ video::-webkit-media-controls {
           align-items: center;
 }
 .portfolio {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   text-align: center;
   padding: 4.5em 9em 4.5em;
+  width: 94%;
+  margin: 0 auto;
 }
 .portfolio .row {
   width: 100%;
@@ -1381,7 +1373,7 @@ video::-webkit-media-controls {
 }
 .portfolio h4 {
   font-size: 1.4em;
-  margin-bottom: 0.2em;
+  margin-bottom: 0;
 }
 .portfolio a {
   color: #5ea635;
@@ -1750,6 +1742,19 @@ video::-webkit-media-controls {
     margin-bottom: 15px;
   }
 }
+.testimonial-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
 .testimonial {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1762,6 +1767,11 @@ video::-webkit-media-controls {
           justify-content: center;
   max-width: 1000px;
   margin: 0 auto;
+}
+@media (max-width: 576px) {
+  .testimonial {
+    max-width: 100%;
+  }
 }
 .testimonial__item {
   display: -webkit-box;
@@ -1780,12 +1790,26 @@ video::-webkit-media-controls {
   min-height: 150px;
   padding: 2em 4em;
 }
+.testimonial__item:focus {
+  outline: none;
+}
+@media (max-width: 576px) {
+  .testimonial__item {
+    padding: 10px 40px 0 0;
+  }
+}
 .testimonial__text {
   text-align: justify;
 }
 .testimonial__icon {
   text-align: right;
   padding-right: 20px;
+  font-size: 2em;
+}
+@media (max-width: 576px) {
+  .testimonial__icon {
+    font-size: 1.2em;
+  }
 }
 .testimonial__image {
   width: 160px;
@@ -1796,6 +1820,11 @@ video::-webkit-media-controls {
 }
 .testimonial__image img {
   max-width: 100%;
+}
+@media (max-width: 576px) {
+  .testimonial__image {
+    width: 100px;
+  }
 }
 .testimonial h4 {
   font-size: 1.2em;
@@ -1839,13 +1868,28 @@ video::-webkit-media-controls {
   width: 60px;
   height: 60px;
   max-width: 100%;
-  border: 2px solid #5ea635;
+  border: 2px solid #fff;
   overflow: hidden;
+  opacity: 0.7;
 }
 .slider-nav a img {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+.slider-nav a:hover {
+  opacity: 0.9;
+  border-color: #7ac74f;
+}
+.slider-nav a.active {
+  border-color: #5ea635;
+  opacity: 1;
+}
+@media (max-width: 576px) {
+  .slider-nav a {
+    width: 50px;
+    height: 50px;
+  }
 }
 .section-video {
   overflow: hidden;
