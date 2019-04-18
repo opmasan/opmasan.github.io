@@ -1,10 +1,5 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 
-// var $ = require('jquery');
-
-// var fullpage = require('fullpage.js');
-// var Barba = require('barba.js');
-
 // variables
 var
     $isAnimatedSecond = $('.second .is-animated'),
@@ -120,10 +115,12 @@ $('#arrowAnim').click(function(){
 
 $(document).ready(function() {
     $('body').fadeTo( "fast", 1 );
-    if($('body').hasClass("tingle-enabled")){
-        fullpage_api.setAllowScrolling(false);
-    } else {
-        fullpage_api.setAllowScrolling(true);
+    if(!window.location.href.indexOf("team")) {
+        if($('body').hasClass("tingle-enabled")){
+            fullpage_api.setAllowScrolling(false);
+        } else {
+            fullpage_api.setAllowScrolling(true);
+        }
     }
 });
 
@@ -166,84 +163,6 @@ if (window.location.href.indexOf("partners") > -1) {
         }
     });
 }
-
-
-
-// Barba.Dispatcher.on('newPageReady', function(current, prev, container) {
-//     if ( $( 'html' ).hasClass( 'fp-enabled' ) ) {
-//         $.fn.fullpage.destroy('all');
-//     }
-//
-//
-// });
-//
-// $(document).ready(function() {
-//     Barba.Pjax.start();
-//     var FadeTransition = Barba.BaseTransition.extend({
-//         start: function() {
-//             /**
-//              * This function is automatically called as soon the Transition starts
-//              * this.newContainerLoading is a Promise for the loading of the new container
-//              * (Barba.js also comes with an handy Promise polyfill!)
-//              */
-//
-//             // As soon the loading is finished and the old page is faded out, let's fade the new page
-//             Promise
-//                 .all([this.newContainerLoading, this.fadeOut()])
-//                 .then(this.fadeIn.bind(this));
-//         },
-//
-//         fadeOut: function() {
-//             /**
-//              * this.oldContainer is the HTMLElement of the old Container
-//              */
-//
-//             return $(this.oldContainer).animate({ opacity: 0 }).promise();
-//         },
-//
-//         fadeIn: function() {
-//             /**
-//              * this.newContainer is the HTMLElement of the new Container
-//              * At this stage newContainer is on the DOM (inside our #barba-container and with visibility: hidden)
-//              * Please note, newContainer is available just after newContainerLoading is resolved!
-//              */
-//
-//             var _this = this;
-//             var $el = $(this.newContainer);
-//
-//             $(this.oldContainer).hide();
-//
-//             $el.css({visibility : 'visible',
-//                 opacity : 0
-//             });
-//
-//             $el.animate({ opacity: 1 }, 400, function() {
-//                 /**
-//                  * Do not forget to call .done() as soon your transition is finished!
-//                  * .done() will automatically remove from the DOM the old Container
-//                  */
-//
-//                 _this.done();
-//             });
-//         }
-//     });
-//
-//     /**
-//      * Next step, you have to tell Barba to use the new Transition
-//      */
-//
-//     Barba.Pjax.getTransition = function() {
-//         /**
-//          * Here you can use your own logic!
-//          * For example you can use different Transition based on the current page or link...
-//          */
-//
-//         return FadeTransition;
-//     };
-//
-// });
-//
-//
 
 function validEmail(email) { // see:
     var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
