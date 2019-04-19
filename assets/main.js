@@ -133,7 +133,7 @@ if (window.location.href.indexOf("partners") > -1) {
         anchors: ['Jeeffy', 'AgentRiskView', 'FreeHomeRisk', 'HazardHub', 'KeyNein', 'UnderNDA', 'TrueReviewCasino'],
         navigation: true,
         navigationTooltips: ['Jeeffy', 'AgentRiskView', 'FreeHomeRisk', 'HazardHub', 'KeyNein', 'UnderNDA', 'TrueReviewCasino'],
-        showActiveTooltip: true,
+        showActiveTooltip: false,
         menu: '#menu',
         sectionsColor: ['#fff', '#f7f7f7', '#fff', '#f7f7f7', '#fff', '#f7f7f7', '#fff', '#f7f7f7'],
         //disabled in mobile
