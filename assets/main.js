@@ -13,7 +13,7 @@ $('#fullpage').fullpage({
     licenseKey: 'xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxx',
     verticalCentered: true,
     lockAnchors: true,
-    anchors: ['1', '2', '3', '4', '5', 'last'],
+    anchors: ['main', 'whatWeDo', 'success', 'testimonials', 'expertise', 'footer'],
     navigation: true,
     navigationTooltips: ['MasterDynamix',  'What we do', 'Your success', 'Testimonials', 'Our expertise', 'Reach us'],
     showActiveTooltip: false,
@@ -27,13 +27,14 @@ $('#fullpage').fullpage({
         });
         
         //slick
-        jQuery('.testimonial').slick({
-            speed: 650,
+        $('.testimonial').slick({
+            speed: 300,
             autoplay: true,
             prevArrow: '<span class="slick-prev"><i class="fas fa-chevron-left fa-2x"></i></span>',
             nextArrow: '<span class="slick-next"><i class="fas fa-chevron-right fa-2x"></i></span>',
-            autoplaySpeed: 9000,
+            autoplaySpeed: 10100,
             slidesToShow: 1,
+            pauseOnHover: false,
             slidesToScroll: 1,
             arrows: true,
             fade: true,
@@ -46,6 +47,11 @@ $('#fullpage').fullpage({
                 }
             ]
         });
+        $(".testimonial").slick("pause");
+        $('.slider-nav').on('click', '.slide-link', function (e) {
+            e.preventDefault();
+            $('.testimonial').slick('slickGoTo', $(this).attr('data-slide'));
+        });
         
         $('.testimonial').on('beforeChange', function(event, slick, currentSlide, nextSlide){
             $(".slide-link").each(function() {
@@ -55,26 +61,21 @@ $('#fullpage').fullpage({
                     $(this).removeClass("active");
                 }
             });
-            
-          });
-        jQuery('a[data-slide]').click(function(e) {
-            e.preventDefault();
-            var slideno = $(this).data('slide');
-            $('.testimonial').slick('slickGoTo', slideno);
         });
-        $('.slick-active').attr('slide-index')
-
     },
     afterLoad: function(origin, destination){
         //using destination
         console.log(destination.anchor);
-        if(destination.anchor == 'last'){
+        if(destination.anchor == 'footer'){
             $('*[data-open="popup-trigger"]').addClass('not-active')
 
         } else {
             $('*[data-open="popup-trigger"]').removeClass('not-active')
         }
-        // console.log(fullpage_api.getActiveSection());
+
+        if(destination.anchor == 'testimonials'){
+			$(".testimonial").slick("play");
+		}
     },
     onLeave: function(origin, nextIndex) {
         console.log(origin.index, nextIndex.index)
@@ -136,8 +137,8 @@ if (window.location.href.indexOf("partners") > -1) {
         menu: '#menu',
         sectionsColor: ['#fff', '#f7f7f7', '#fff', '#f7f7f7', '#fff', '#f7f7f7', '#fff', '#f7f7f7'],
         //disabled in mobile
-        responsiveWidth: 767,
-        afterResponsive: function(isResponsive){},
+        // responsiveWidth: 767,
+        // afterResponsive: function(isResponsive){},
         afterRender: function(){
             var myModalContent = new tingle.modal({
                 onOpen: function() {
