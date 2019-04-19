@@ -2,6 +2,7 @@ console.log('brand of goods 3');
 
 
 console.log('footer');
+console.log('headline');
 function classToggle() {
   const navs = document.querySelectorAll('.navbar__items')
   
@@ -9,13 +10,12 @@ function classToggle() {
 }
 
 document.querySelector('.navbar__link-toggle').addEventListener('click', classToggle);
-console.log('headline');
 // .key-to-success scripts goes here
 // .main-block scripts goes here
 // .members scripts goes here
+// .portfolio scripts goes here
 // .partners scripts goes here
 console.log('partners');
-// .portfolio scripts goes here
 // .reach_us scripts goes here
 (function() {
     var calculateHeight;
@@ -54,8 +54,8 @@ console.log('partners');
     });
 
 }).call(this);
-// .reach_us_form scripts goes here
 // .slider scripts goes here
+// .reach_us_form scripts goes here
 // .tech scripts goes here
 // .slider scripts goes here
 // .main-video scripts goes here

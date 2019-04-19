@@ -137,8 +137,9 @@ if (window.location.href.indexOf("partners") > -1) {
         menu: '#menu',
         sectionsColor: ['#fff', '#f7f7f7', '#fff', '#f7f7f7', '#fff', '#f7f7f7', '#fff', '#f7f7f7'],
         //disabled in mobile
-        // responsiveWidth: 767,
-        // afterResponsive: function(isResponsive){},
+        responsiveWidth: 767,
+        responsiveHeight: 380,
+        afterResponsive: function(isResponsive){},
         afterRender: function(){
             var myModalContent = new tingle.modal({
                 onOpen: function() {
