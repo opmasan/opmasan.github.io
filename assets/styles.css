@@ -1909,6 +1909,24 @@ video::-webkit-media-controls {
     height: 100px;
   }
 }
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  .testimonial {
+    padding-top: 80px;
+  }
+  .testimonial__image {
+    width: 100px;
+    height: 100px;
+  }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
+  .testimonial {
+    padding-top: 80px;
+  }
+  .testimonial__image {
+    width: 100px;
+    height: 100px;
+  }
+}
 .slick-list {
   display: -webkit-box;
   display: -ms-flexbox;
