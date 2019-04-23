@@ -10,8 +10,8 @@ function classToggle() {
 
 document.querySelector('.navbar__link-toggle').addEventListener('click', classToggle);
 console.log('headline');
-// .key-to-success scripts goes here
 // .main-block scripts goes here
+// .key-to-success scripts goes here
 // .members scripts goes here
 // .partners scripts goes here
 console.log('partners');

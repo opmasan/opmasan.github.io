@@ -166,7 +166,8 @@ if (window.location.href.indexOf("partners") > -1) {
     });
 }
 
-function validEmail(email) { // see:
+
+function validEmail(email) {
     var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
     return re.test(email);
 }
@@ -276,7 +277,9 @@ function loaded() {
 };
 document.addEventListener("DOMContentLoaded", loaded, false);
 
-if (window.location.href.indexOf("index") > -1) {
+
+
+if (window.location.href.indexOf("index") > -1 || location.pathname == "/") {
     // get all data in form and return object
     function getFormData2() {
         var form = document.getElementById("gform2");
@@ -357,7 +360,7 @@ if (window.location.href.indexOf("index") > -1) {
         }
     }
     function loaded2() {
-        console.log('contact form submission handler loaded successfully');
+        console.log('Bottom contact form submission handler loaded successfully');
         // bind to the submit event of our form
         var form = document.getElementById('gform2');
         form.addEventListener("submit", handleFormSubmit2, false);
