@@ -1964,7 +1964,12 @@ video::-webkit-media-controls {
     margin: 12px;
   }
 }
-@media only screen and (min-device-width: 480px) and (max-device-width: 812px) and (orientation: landscape) {
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  .slider-nav a {
+    display: none;
+  }
+}
+@media only screen and (min-device-width: 375px) and (max-device-width: 812px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3) {
   .slider-nav a {
     display: none;
   }
