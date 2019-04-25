@@ -41,7 +41,7 @@ $('#fullpage').fullpage({
             fade: true,
             responsive: [
                 {
-                  breakpoint: 767,
+                  breakpoint: 425,
                   settings: {
                     arrows: false
                   }
@@ -79,13 +79,14 @@ $('#fullpage').fullpage({
 		}
     },
     onLeave: function(origin, nextIndex) {
-        console.log(origin.index, nextIndex.index)
+        // console.log(origin.index, nextIndex.index)
         // first animation
+       
         if( origin.index == 0 && nextIndex.index == 1 ) {
             $isAnimatedSecond.addClass('animated');
-            $isAnimatedSecond.eq(0).addClass('animated fadeIn').css('animation-delay', '0.2s');
-            $isAnimatedSecond.eq(1).addClass('animated fadeIn').css('animation-delay', '0.4s');
-            $isAnimatedSecond.eq(2).addClass('animated fadeIn').css('animation-delay', '0.8s');
+            $isAnimatedSecond.eq(0).addClass('animated fadeIn').css('animation-delay', '0.4s');
+            $isAnimatedSecond.eq(1).addClass('animated fadeIn').css('animation-delay', '0.8s');
+            $isAnimatedSecond.eq(2).addClass('animated fadeIn').css('animation-delay', '1.2s');
         }
 
         else if( (origin.index == 0 || origin.index == 1 ) && nextIndex.index == 2 ) {
@@ -96,12 +97,12 @@ $('#fullpage').fullpage({
         }
 
         else if( ( origin.index == 0 || origin.index == 1 || origin.index == 2 ) && nextIndex.index == 3 ) {
-            $isAnimatedTestimonials.eq(0).addClass('animated fadeInDownBig').css('animation-delay', '0.05s');
+            $isAnimatedTestimonials.eq(0).addClass('animated fadeInDownBig ').css('animation-delay', '0.15s');
             $isAnimatedTestimonials.eq(1).addClass('animated fadeIn').css('animation-delay', '0.6s');
         }
 
         else if( ( origin.index == 0 || origin.index == 1 || origin.index == 2 || origin.index == 3 ) && nextIndex.index == 4 ) {
-            $isAnimatedFifth.eq(0).addClass('animated zoomIn').css('animation-delay', '.1s');
+            $isAnimatedFifth.eq(0).addClass('animated zoomIn').css('animation-delay', '.2s');
             $isAnimatedFifth.eq(1).addClass('animated zoomIn').css('animation-delay', '.5s');
         }
 
@@ -131,9 +132,9 @@ if (window.location.href.indexOf("partners") > -1) {
         licenseKey: 'xxxxxxxx-xxxxxxxx-xxxxxxxx-xxxxxxxx',
         verticalCentered: true,
         lockAnchors: true,
-        anchors: ['Jeeffy', 'AgentRiskView', 'FreeHomeRisk', 'HazardHub', 'KeyNein', 'UnderNDA', 'TrueReviewCasino'],
+        anchors: ['Jeeffy', 'FreeHomeRisk', 'HazardHub', 'KeyNein', 'UnderNDA', 'TrueReviewCasino'],
         navigation: true,
-        navigationTooltips: ['Jeeffy', 'AgentRiskView', 'FreeHomeRisk', 'HazardHub', 'KeyNein', 'UnderNDA', 'TrueReviewCasino'],
+        navigationTooltips: ['Jeeffy', 'FreeHomeRisk', 'HazardHub', 'KeyNein', 'UnderNDA', 'TrueReviewCasino'],
         showActiveTooltip: false,
         menu: '#menu',
         sectionsColor: ['#fff', '#f7f7f7', '#fff', '#f7f7f7', '#fff', '#f7f7f7', '#fff', '#f7f7f7'],
@@ -368,6 +369,9 @@ if (window.location.href.indexOf("index") > -1 || location.pathname == "/") {
     };
     document.addEventListener('DOMContentLoaded', loaded2, false);
 };
+
+
+
 },{}]},{},[1])
 
 //# sourceMappingURL=main.js.map
