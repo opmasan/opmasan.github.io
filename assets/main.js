@@ -20,6 +20,7 @@ $('#fullpage').fullpage({
     menu: '#menu',
     // sectionsColor: ['#fff',  '#fff', '#fff', '#fff', '#fff'],
     scrollOverflow: true,
+    css3: false,
     afterRender: function(){
 
         particlesJS.load('particles-js', 'assets/particles.json', function() {
