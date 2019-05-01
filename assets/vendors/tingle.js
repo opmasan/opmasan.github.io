@@ -361,7 +361,7 @@
 
             this.modalCloseBtnIcon = document.createElement('span')
             this.modalCloseBtnIcon.classList.add('tingle-modal__closeIcon')
-            this.modalCloseBtnIcon.innerHTML = '×'
+            this.modalCloseBtnIcon.innerHTML = '<div class="fa fa-times"></div>'
 
             this.modalCloseBtnLabel = document.createElement('span')
             this.modalCloseBtnLabel.classList.add('tingle-modal__closeLabel')

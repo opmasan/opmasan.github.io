@@ -21,6 +21,10 @@ $('#fullpage').fullpage({
     // sectionsColor: ['#fff',  '#fff', '#fff', '#fff', '#fff'],
     scrollOverflow: true,
     css3: false,
+    //disabled in mobile
+    responsiveWidth: 767,
+    responsiveHeight: 380,
+    afterResponsive: function(isResponsive){},
     afterRender: function(){
 
         particlesJS.load('particles-js', 'assets/particles.json', function() {
@@ -81,33 +85,34 @@ $('#fullpage').fullpage({
     onLeave: function(origin, nextIndex) {
         // console.log(origin.index, nextIndex.index)
         // first animation
-       
-        if( origin.index == 0 && nextIndex.index == 1 ) {
-            $isAnimatedSecond.addClass('animated');
-            $isAnimatedSecond.eq(0).addClass('animated fadeIn').css('animation-delay', '0.4s');
-            $isAnimatedSecond.eq(1).addClass('animated fadeIn').css('animation-delay', '0.8s');
-            $isAnimatedSecond.eq(2).addClass('animated fadeIn').css('animation-delay', '1.2s');
-        }
-
-        else if( (origin.index == 0 || origin.index == 1 ) && nextIndex.index == 2 ) {
-            $isAnimatedThird.addClass('animated');
-            $isAnimatedThird.eq(0).addClass('fadeInLeftBig').css('animation-delay', '.2s');
-            $isAnimatedThird.eq(1).addClass('fadeInUpBig').css('animation-delay', '.4s');
-            // $isAnimatedSecondSingle.addClass('animated rollIn').css('animation-delay', '1.7s');
-        }
-
-        else if( ( origin.index == 0 || origin.index == 1 || origin.index == 2 ) && nextIndex.index == 3 ) {
-            $isAnimatedTestimonials.eq(0).addClass('animated fadeInDownBig ').css('animation-delay', '0.15s');
-            $isAnimatedTestimonials.eq(1).addClass('animated fadeIn').css('animation-delay', '0.6s');
-        }
-
-        else if( ( origin.index == 0 || origin.index == 1 || origin.index == 2 || origin.index == 3 ) && nextIndex.index == 4 ) {
-            $isAnimatedFifth.eq(0).addClass('animated zoomIn').css('animation-delay', '.2s');
-            $isAnimatedFifth.eq(1).addClass('animated zoomIn').css('animation-delay', '.5s');
-        }
-
-        else if( ( origin.index == 0 || origin.index == 1 || origin.index == 2 || origin.index == 3 || origin.index == 4 ) && nextIndex.index == 5 ) {
-            $isAnimatedSixth.eq(0).addClass('animated zoomIn').css('animation-delay', '.3s');
+        if( $(window).width() > 767) {
+            if( origin.index == 0 && nextIndex.index == 1 ) {
+                $isAnimatedSecond.addClass('animated');
+                $isAnimatedSecond.eq(0).addClass('animated fadeIn').css('animation-delay', '0.4s');
+                $isAnimatedSecond.eq(1).addClass('animated fadeIn').css('animation-delay', '0.8s');
+                $isAnimatedSecond.eq(2).addClass('animated fadeIn').css('animation-delay', '1.2s');
+            }
+    
+            else if( (origin.index == 0 || origin.index == 1 ) && nextIndex.index == 2 ) {
+                $isAnimatedThird.addClass('animated');
+                $isAnimatedThird.eq(0).addClass('fadeInLeftBig').css('animation-delay', '.2s');
+                $isAnimatedThird.eq(1).addClass('fadeInUpBig').css('animation-delay', '.4s');
+                // $isAnimatedSecondSingle.addClass('animated rollIn').css('animation-delay', '1.7s');
+            }
+    
+            else if( ( origin.index == 0 || origin.index == 1 || origin.index == 2 ) && nextIndex.index == 3 ) {
+                $isAnimatedTestimonials.eq(0).addClass('animated fadeInDownBig ').css('animation-delay', '0.15s');
+                $isAnimatedTestimonials.eq(1).addClass('animated fadeIn').css('animation-delay', '0.6s');
+            }
+    
+            else if( ( origin.index == 0 || origin.index == 1 || origin.index == 2 || origin.index == 3 ) && nextIndex.index == 4 ) {
+                $isAnimatedFifth.eq(0).addClass('animated zoomIn').css('animation-delay', '.2s');
+                $isAnimatedFifth.eq(1).addClass('animated zoomIn').css('animation-delay', '.5s');
+            }
+    
+            else if( ( origin.index == 0 || origin.index == 1 || origin.index == 2 || origin.index == 3 || origin.index == 4 ) && nextIndex.index == 5 ) {
+                $isAnimatedSixth.eq(0).addClass('animated zoomIn').css('animation-delay', '.3s');
+            }
         }
     }
 });
